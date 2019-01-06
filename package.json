@@ -1,0 +1,11 @@
+{
+  "name": "herokuApis",
+  "version": "1.0.0",
+  "description": "sample heroku apis for evrything  ",
+  "main": "server.js",
+  "author": "imran096@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
