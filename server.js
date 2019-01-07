@@ -3,7 +3,11 @@ const path = require('path')
 const app = express()
 const port = 3000
 
+// app.engine('html', require('ejs').renderFile);
+// app.set()
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views'); 
  app.get('/apis', (req, res) => res.json({name:'Hello World!',done:'yes'}))
-app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/index.html')))
-app.get('/test', (req, res) => res.json({year:1992}))
+app.get('/', (req, res) => res.render('home'))
+app.get('/login', (req, res) => res.render('login'))
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

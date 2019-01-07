@@ -1,0 +1,74 @@
+<% include layouts/header %>
+
+<div class="">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      <form id="" class="" action="/apis/question/cat" method="post">
+        <label>Add a Catogory:</label>
+        <input class="form-control" type="text" name="cat"/>
+        <input type="submit" name="" value="Add" class="btn btn-primary">
+      </form>
+        <form id="" class="" action="/apis/question/input" method="post">
+          <div>
+            <h4> select a question catagory</h4>
+            
+           
+            <select name="cat">
+            <% for (var d of sdata) { %>
+              <option value= "<%= d.catogory %>"><%= d.catogory %></option> 
+            <% } %>       
+            </select>
+
+            
+            
+          </div>
+          <div>
+              <p></p>
+              <label>Ouestion:</label>
+              <input class="form-control" type="text" name="quesName"/>
+          </div>
+          <div>
+          <h4>Select correct Answer</h4>
+          <select name ="an">
+            <option>...</option>
+            <option name="ans" value ="a">A</option>
+            <option name="ans" value ="b">B</option>
+            <option name="ans" value ="c">C</option>
+            <option name="ans" value ="d">D</option>
+          </select>
+        </div>
+          <div>
+              <p></p>
+              <label>Option A:</label>
+              <input class="form-control" type="text" name="qa"/>
+          </div>
+          <div>
+              <p></p>
+              <label>Option B:</label>
+              <input class="form-control" type="text" name="qb"/>
+          </div>
+          <div>
+              <p></p>
+              <label>Option C:</label>
+              <input class="form-control" type="text" name="qc"/>
+          </div>
+          <div>
+        <p></p>
+        <label>Option D:</label>
+        <input class="form-control" type="text" name="qd"/>
+        </div>
+        
+    
+      <div>
+          <input type="submit" class="btn btn-primary btn-sm" value="Submit Question"/>
+      </div>
+  </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<% include layouts/footer %>
